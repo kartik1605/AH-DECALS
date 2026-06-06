@@ -1,0 +1,12 @@
+# Cloudflare deployment config for the AH Decals static site.
+# No build step — the HTML/CSS/JS at the project root is served directly
+# as static assets by a Cloudflare Worker.
+
+name = "ah-decals"
+compatibility_date = "2025-01-01"
+
+# Serve everything in the repo root as static assets.
+# /            -> index.html
+# /about.html  -> about.html  (and /about resolves too)
+[assets]
+directory = "."
